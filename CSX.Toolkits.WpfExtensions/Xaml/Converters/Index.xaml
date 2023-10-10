@@ -1,0 +1,7 @@
+﻿<rm:CachingResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:rm="clr-namespace:CSX.Toolkits.WpfExtensions.ResourceManagement"
+                              xmlns:converters="clr-namespace:CSX.Toolkits.WpfExtensions.Xaml.Converters">
+
+    <converters:HighlightOverlayMixer x:Key="HighlightOverlayMixer" />
+</rm:CachingResourceDictionary>

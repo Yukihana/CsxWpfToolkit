@@ -1,0 +1,36 @@
+﻿<Window x:Class="CSX.Toolkits.WpfExtensions.Dialogs.QueryDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:theme="clr-namespace:CSX.Toolkits.WpfExtensions.ThemeEngine"
+        xmlns:logic="clr-namespace:CSX.Toolkits.WpfExtensions.Contexts.QueryDialogContext"
+        xmlns:controls="clr-namespace:CSX.Toolkits.WpfExtensions.Controls"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=logic:QueryDialogContextLogic, IsDesignTimeCreatable=True}"
+        SizeToContent="WidthAndHeight"
+        Title="QueryDialog"
+        Background="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundNormalBrushKey}}"
+        MinWidth="300">
+    <Window.DataContext>
+        <logic:QueryDialogContextLogic />
+    </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="{x:Type controls:Button}">
+            <Setter Property="Background" Value="#CCC" />
+        </Style>
+    </Window.Resources>
+    <StackPanel MaxWidth="600">
+        <Border Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+            <DockPanel Margin="8">
+                <Border Height="48" Width="48" DockPanel.Dock="Left" Margin="8" />
+                <TextBlock x:Name="Message" VerticalAlignment="Center" Margin="8" />
+            </DockPanel>
+        </Border>
+        <Rectangle Height="1" HorizontalAlignment="Stretch" />
+        <WrapPanel x:Name="ButtonsPanel" Margin="5" HorizontalAlignment="{Binding ButtonsPanelAlignment}">
+            <controls:Button Width="100" Height="26">OK</controls:Button>
+            <controls:Button Width="100" Height="26">Cancel</controls:Button>
+        </WrapPanel>
+    </StackPanel>
+</Window>

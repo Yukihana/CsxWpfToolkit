@@ -1,0 +1,14 @@
+﻿<rm:CachingResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                              xmlns:rm="clr-namespace:CSX.Toolkits.WpfExtensions.ResourceManagement">
+    <rm:CachingResourceDictionary.MergedDictionaries>
+
+        <!--Converters-->
+        <rm:CachingResourceDictionary Source="/CSX.Toolkits.WpfExtensions;component/Xaml/Converters/Index.xaml" />
+
+        <!--Brushes-->
+
+        <!--DefaultStyles-->
+        <rm:CachingResourceDictionary Source="/CSX.Toolkits.WpfExtensions;component/Themes/DefaultStyles/Button.xaml" />
+        <rm:CachingResourceDictionary Source="/CSX.Toolkits.WpfExtensions;component/Themes/DefaultStyles/NumericUpDown.xaml" />
+    </rm:CachingResourceDictionary.MergedDictionaries>
+</rm:CachingResourceDictionary>
