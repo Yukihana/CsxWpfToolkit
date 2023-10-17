@@ -1,22 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <PackageOutputPath>D:\Desktop\NugetLib</PackageOutputPath>
+    <Version>0.$([System.DateTime]::UtcNow.ToString("yyyy.MMdd.HHmm"))</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="CSX.Toolkits.DotNet" Version="0.2023.1104.1446" />
+    <PackageReference Include="CSX.Toolkits.WpfGenerators" Version="0.2023.1105.1630" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Direct3D.DXC" Version="1.7.2308.12" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="CSX.Toolkits.CSharp">
-      <HintPath>..\..\CsxCSharpToolkit\CSX.Toolkits.CSharp\bin\Debug\net7.0\CSX.Toolkits.CSharp.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

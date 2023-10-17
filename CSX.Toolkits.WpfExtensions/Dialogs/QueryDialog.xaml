@@ -10,7 +10,7 @@
         d:DataContext="{d:DesignInstance Type=logic:QueryDialogContextLogic, IsDesignTimeCreatable=True}"
         SizeToContent="WidthAndHeight"
         Title="QueryDialog"
-        Background="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundNormalBrushKey}}"
+        Background="{DynamicResource {x:Static theme:ControlComponents.BackgroundNormalBrushKey}}"
         MinWidth="300">
     <Window.DataContext>
         <logic:QueryDialogContextLogic />

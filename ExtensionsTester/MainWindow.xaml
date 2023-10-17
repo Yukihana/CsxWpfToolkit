@@ -8,17 +8,17 @@
         xmlns:controls="clr-namespace:CSX.Toolkits.WpfExtensions.Controls;assembly=CSX.Toolkits.WpfExtensions"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-  <WrapPanel>
-    <Border Width="200" Height="100">
-      <Button Content="Stuff" />
-    </Border>
-    <Border Width="200" Height="100">
-      <controls:Button Content="Stuff" HorizontalAlignment="Center" VerticalAlignment="Center" />
-    </Border>
-    <controls:NumericUpDown Value="45" />
-    <Button Background="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundNormalBrushKey}}">Hi</Button>
-    <Button Background="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundNormalBrushKey}}">
-      <TextBlock Text="XamlTest" />
-    </Button>
-  </WrapPanel>
+    <WrapPanel>
+        <Border Width="200" Height="100">
+            <Button Content="Stuff" />
+        </Border>
+        <Border Width="200" Height="100">
+            <controls:Button Content="Stuff" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <controls:NumericUpDown Value="45" />
+        <Button Background="{DynamicResource {x:Static theme:ControlComponents.BackgroundNormalBrushKey}}">Hi</Button>
+        <Button Background="{DynamicResource {x:Static theme:ControlComponents.BackgroundNormalBrushKey}}">
+            <TextBlock Text="XamlTest" />
+        </Button>
+    </WrapPanel>
 </Window>

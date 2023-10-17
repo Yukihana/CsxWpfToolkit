@@ -1,172 +1,26 @@
 ﻿using System.Windows;
 using System.Windows.Media;
+using CSX.Toolkits.WpfGenerators;
 
 namespace CSX.Toolkits.WpfExtensions.ThemeEngine;
 
-public static partial class ThemeComponents
+public static partial class ControlComponents
 {
-    // Resource Keys : Colors
+    // Background
 
-    public static ResourceKey ControlBackgroundNormalColorKey { get; } = GetColorKey(ThemeSlots.ControlBackgroundNormal);
-    public static ResourceKey ControlBackgroundFocusedColorKey { get; } = GetColorKey(ThemeSlots.ControlBackgroundFocused);
-    public static ResourceKey ControlBackgroundPressedColorKey { get; } = GetColorKey(ThemeSlots.ControlBackgroundPressed);
-    public static ResourceKey ControlBackgroundEmphasisColorKey { get; } = GetColorKey(ThemeSlots.ControlBackgroundEmphasis);
-    public static ResourceKey ControlBackgroundDisabledColorKey { get; } = GetColorKey(ThemeSlots.ControlBackgroundDisabled);
-
-    public static ResourceKey ControlBorderNormalColorKey { get; } = GetColorKey(ThemeSlots.ControlBorderNormal);
-    public static ResourceKey ControlBorderFocusedColorKey { get; } = GetColorKey(ThemeSlots.ControlBorderFocused);
-    public static ResourceKey ControlBorderPressedColorKey { get; } = GetColorKey(ThemeSlots.ControlBorderPressed);
-    public static ResourceKey ControlBorderEmphasisColorKey { get; } = GetColorKey(ThemeSlots.ControlBorderEmphasis);
-    public static ResourceKey ControlBorderDisabledColorKey { get; } = GetColorKey(ThemeSlots.ControlBorderDisabled);
-
-    public static ResourceKey ControlForegroundNormalColorKey { get; } = GetColorKey(ThemeSlots.ControlForegroundNormal);
-    public static ResourceKey ControlForegroundFocusedColorKey { get; } = GetColorKey(ThemeSlots.ControlForegroundFocused);
-    public static ResourceKey ControlForegroundPressedColorKey { get; } = GetColorKey(ThemeSlots.ControlForegroundPressed);
-    public static ResourceKey ControlForegroundEmphasisColorKey { get; } = GetColorKey(ThemeSlots.ControlForegroundEmphasis);
-    public static ResourceKey ControlForegroundDisabledColorKey { get; } = GetColorKey(ThemeSlots.ControlForegroundDisabled);
-
-    public static ResourceKey ControlTextNormalColorKey { get; } = GetColorKey(ThemeSlots.ControlTextNormal);
-    public static ResourceKey ControlTextFocusedColorKey { get; } = GetColorKey(ThemeSlots.ControlTextFocused);
-    public static ResourceKey ControlTextPressedColorKey { get; } = GetColorKey(ThemeSlots.ControlTextPressed);
-    public static ResourceKey ControlTextEmphasisColorKey { get; } = GetColorKey(ThemeSlots.ControlTextEmphasis);
-    public static ResourceKey ControlTextDisabledColorKey { get; } = GetColorKey(ThemeSlots.ControlTextDisabled);
-
-    // Resource Keys : Brushes
-
-    public static ResourceKey ControlBackgroundNormalBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBackgroundNormal);
-    public static ResourceKey ControlBackgroundFocusedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBackgroundFocused);
-    public static ResourceKey ControlBackgroundPressedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBackgroundPressed);
-    public static ResourceKey ControlBackgroundEmphasisBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBackgroundEmphasis);
-    public static ResourceKey ControlBackgroundDisabledBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBackgroundDisabled);
-
-    public static ResourceKey ControlBorderNormalBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBorderNormal);
-    public static ResourceKey ControlBorderFocusedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBorderFocused);
-    public static ResourceKey ControlBorderPressedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBorderPressed);
-    public static ResourceKey ControlBorderEmphasisBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBorderEmphasis);
-    public static ResourceKey ControlBorderDisabledBrushKey { get; } = GetBrushKey(ThemeSlots.ControlBorderDisabled);
-
-    public static ResourceKey ControlForegroundNormalBrushKey { get; } = GetBrushKey(ThemeSlots.ControlForegroundNormal);
-    public static ResourceKey ControlForegroundFocusedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlForegroundFocused);
-    public static ResourceKey ControlForegroundPressedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlForegroundPressed);
-    public static ResourceKey ControlForegroundEmphasisBrushKey { get; } = GetBrushKey(ThemeSlots.ControlForegroundEmphasis);
-    public static ResourceKey ControlForegroundDisabledBrushKey { get; } = GetBrushKey(ThemeSlots.ControlForegroundDisabled);
-
-    public static ResourceKey ControlTextNormalBrushKey { get; } = GetBrushKey(ThemeSlots.ControlTextNormal);
-    public static ResourceKey ControlTextFocusedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlTextFocused);
-    public static ResourceKey ControlTextPressedBrushKey { get; } = GetBrushKey(ThemeSlots.ControlTextPressed);
-    public static ResourceKey ControlTextEmphasisBrushKey { get; } = GetBrushKey(ThemeSlots.ControlTextEmphasis);
-    public static ResourceKey ControlTextDisabledBrushKey { get; } = GetBrushKey(ThemeSlots.ControlTextDisabled);
-
-    // Fields
-
+    [StaticThemeResource(StoragePath: nameof(_resourceDictionary), GetKeyMethod: nameof(GetColorKey), ThemeSlot: nameof(ThemeSlots.ControlBackgroundNormal))]
     private static Color _controlBackgroundNormalColor = SystemColors.ControlColor;
+
     private static Color _controlBackgroundFocusedColor = SystemColors.ControlColor;
     private static Color _controlBackgroundPressedColor = SystemColors.ControlColor;
     private static Color _controlBackgroundEmphasisColor = SystemColors.ControlColor;
     private static Color _controlBackgroundDisabledColor = SystemColors.ControlColor;
-
-    private static Color _controlBorderNormalColor = SystemColors.ControlColor;
-    private static Color _controlBorderFocusedColor = SystemColors.ControlColor;
-    private static Color _controlBorderPressedColor = SystemColors.ControlColor;
-    private static Color _controlBorderEmphasisColor = SystemColors.ControlColor;
-    private static Color _controlBorderDisabledColor = SystemColors.ControlColor;
-
-    private static Color _controlForegroundNormalColor = SystemColors.ControlColor;
-    private static Color _controlForegroundFocusedColor = SystemColors.ControlColor;
-    private static Color _controlForegroundPressedColor = SystemColors.ControlColor;
-    private static Color _controlForegroundEmphasisColor = SystemColors.ControlColor;
-    private static Color _controlForegroundDisabledColor = SystemColors.ControlColor;
-
-    private static Color _controlTextNormalColor = SystemColors.ControlColor;
-    private static Color _controlTextFocusedColor = SystemColors.ControlColor;
-    private static Color _controlTextPressedColor = SystemColors.ControlColor;
-    private static Color _controlTextEmphasisColor = SystemColors.ControlColor;
-    private static Color _controlTextDisabledColor = SystemColors.ControlColor;
-
-    // Brush
 
     private static Brush _controlBackgroundNormalBrush = SystemColors.ControlBrush;
     private static Brush _controlBackgroundFocusedBrush = SystemColors.ControlBrush;
     private static Brush _controlBackgroundPressedBrush = SystemColors.ControlBrush;
     private static Brush _controlBackgroundEmphasisBrush = SystemColors.ControlBrush;
     private static Brush _controlBackgroundDisabledBrush = SystemColors.ControlBrush;
-
-    private static Brush _controlBorderNormalBrush = SystemColors.ControlBrush;
-    private static Brush _controlBorderFocusedBrush = SystemColors.ControlBrush;
-    private static Brush _controlBorderPressedBrush = SystemColors.ControlBrush;
-    private static Brush _controlBorderEmphasisBrush = SystemColors.ControlBrush;
-    private static Brush _controlBorderDisabledBrush = SystemColors.ControlBrush;
-
-    private static Brush _controlForegroundNormalBrush = SystemColors.ControlBrush;
-    private static Brush _controlForegroundFocusedBrush = SystemColors.ControlBrush;
-    private static Brush _controlForegroundPressedBrush = SystemColors.ControlBrush;
-    private static Brush _controlForegroundEmphasisBrush = SystemColors.ControlBrush;
-    private static Brush _controlForegroundDisabledBrush = SystemColors.ControlBrush;
-
-    private static Brush _controlTextNormalBrush = SystemColors.ControlBrush;
-    private static Brush _controlTextFocusedBrush = SystemColors.ControlBrush;
-    private static Brush _controlTextPressedBrush = SystemColors.ControlBrush;
-    private static Brush _controlTextEmphasisBrush = SystemColors.ControlBrush;
-    private static Brush _controlTextDisabledBrush = SystemColors.ControlBrush;
-
-    // Setup
-
-    private static void AssignControlTheme()
-    {
-        // Colors
-
-        ControlBackgroundNormalColor = GetColor(ThemeSlots.ControlBackgroundNormal);
-        ControlBackgroundFocusedColor = GetColor(ThemeSlots.ControlBackgroundFocused);
-        ControlBackgroundPressedColor = GetColor(ThemeSlots.ControlBackgroundPressed);
-        ControlBackgroundEmphasisColor = GetColor(ThemeSlots.ControlBackgroundEmphasis);
-        ControlBackgroundDisabledColor = GetColor(ThemeSlots.ControlBackgroundNormal);
-
-        ControlBorderNormalColor = GetColor(ThemeSlots.ControlBorderNormal);
-        ControlBorderFocusedColor = GetColor(ThemeSlots.ControlBorderFocused);
-        ControlBorderPressedColor = GetColor(ThemeSlots.ControlBorderPressed);
-        ControlBorderEmphasisColor = GetColor(ThemeSlots.ControlBorderEmphasis);
-        ControlBorderDisabledColor = GetColor(ThemeSlots.ControlBorderNormal);
-
-        ControlForegroundNormalColor = GetColor(ThemeSlots.ControlForegroundNormal);
-        ControlForegroundFocusedColor = GetColor(ThemeSlots.ControlForegroundFocused);
-        ControlForegroundPressedColor = GetColor(ThemeSlots.ControlForegroundPressed);
-        ControlForegroundEmphasisColor = GetColor(ThemeSlots.ControlForegroundEmphasis);
-        ControlForegroundDisabledColor = GetColor(ThemeSlots.ControlForegroundNormal);
-
-        ControlTextNormalColor = GetColor(ThemeSlots.ControlTextNormal);
-        ControlTextFocusedColor = GetColor(ThemeSlots.ControlTextFocused);
-        ControlTextPressedColor = GetColor(ThemeSlots.ControlTextPressed);
-        ControlTextEmphasisColor = GetColor(ThemeSlots.ControlTextEmphasis);
-        ControlTextDisabledColor = GetColor(ThemeSlots.ControlTextNormal);
-
-        // Brushes
-
-        ControlBackgroundNormalBrush = GetBrush(ThemeSlots.ControlBackgroundNormal);
-        ControlBackgroundFocusedBrush = GetBrush(ThemeSlots.ControlBackgroundFocused);
-        ControlBackgroundPressedBrush = GetBrush(ThemeSlots.ControlBackgroundPressed);
-        ControlBackgroundEmphasisBrush = GetBrush(ThemeSlots.ControlBackgroundEmphasis);
-        ControlBackgroundDisabledBrush = GetBrush(ThemeSlots.ControlBackgroundNormal);
-
-        ControlBorderNormalBrush = GetBrush(ThemeSlots.ControlBorderNormal);
-        ControlBorderFocusedBrush = GetBrush(ThemeSlots.ControlBorderFocused);
-        ControlBorderPressedBrush = GetBrush(ThemeSlots.ControlBorderPressed);
-        ControlBorderEmphasisBrush = GetBrush(ThemeSlots.ControlBorderEmphasis);
-        ControlBorderDisabledBrush = GetBrush(ThemeSlots.ControlBorderNormal);
-
-        ControlForegroundNormalBrush = GetBrush(ThemeSlots.ControlForegroundNormal);
-        ControlForegroundFocusedBrush = GetBrush(ThemeSlots.ControlForegroundFocused);
-        ControlForegroundPressedBrush = GetBrush(ThemeSlots.ControlForegroundPressed);
-        ControlForegroundEmphasisBrush = GetBrush(ThemeSlots.ControlForegroundEmphasis);
-        ControlForegroundDisabledBrush = GetBrush(ThemeSlots.ControlForegroundNormal);
-
-        ControlTextNormalBrush = GetBrush(ThemeSlots.ControlTextNormal);
-        ControlTextFocusedBrush = GetBrush(ThemeSlots.ControlTextFocused);
-        ControlTextPressedBrush = GetBrush(ThemeSlots.ControlTextPressed);
-        ControlTextEmphasisBrush = GetBrush(ThemeSlots.ControlTextEmphasis);
-        ControlTextDisabledBrush = GetBrush(ThemeSlots.ControlTextNormal);
-    }
-
-    // ControlBackground
 
     public static Color ControlBackgroundNormalColor
     {
@@ -268,7 +122,133 @@ public static partial class ThemeComponents
         }
     }
 
-    // ControlBorder
+    // Auxiliary
+
+    private static Color _controlAuxiliaryNormalColor = SystemColors.ControlColor;
+    private static Color _controlAuxiliaryFocusedColor = SystemColors.ControlColor;
+    private static Color _controlAuxiliaryPressedColor = SystemColors.ControlColor;
+    private static Color _controlAuxiliaryEmphasisColor = SystemColors.ControlColor;
+    private static Color _controlAuxiliaryDisabledColor = SystemColors.ControlColor;
+
+    private static Brush _controlAuxiliaryNormalBrush = SystemColors.ControlBrush;
+    private static Brush _controlAuxiliaryFocusedBrush = SystemColors.ControlBrush;
+    private static Brush _controlAuxiliaryPressedBrush = SystemColors.ControlBrush;
+    private static Brush _controlAuxiliaryEmphasisBrush = SystemColors.ControlBrush;
+    private static Brush _controlAuxiliaryDisabledBrush = SystemColors.ControlBrush;
+
+    public static Color ControlAuxiliaryNormalColor
+    {
+        get => _controlAuxiliaryNormalColor;
+        set
+        {
+            _controlAuxiliaryNormalColor = value;
+            _resourceDictionary[ControlAuxiliaryNormalColorKey] = value;
+        }
+    }
+
+    public static Color ControlAuxiliaryFocusedColor
+    {
+        get => _controlAuxiliaryFocusedColor;
+        set
+        {
+            _controlAuxiliaryFocusedColor = value;
+            _resourceDictionary[ControlAuxiliaryFocusedColorKey] = value;
+        }
+    }
+
+    public static Color ControlAuxiliaryPressedColor
+    {
+        get => _controlAuxiliaryPressedColor;
+        set
+        {
+            _controlAuxiliaryPressedColor = value;
+            _resourceDictionary[ControlAuxiliaryPressedColorKey] = value;
+        }
+    }
+
+    public static Color ControlAuxiliaryEmphasisColor
+    {
+        get => _controlAuxiliaryEmphasisColor;
+        set
+        {
+            _controlAuxiliaryEmphasisColor = value;
+            _resourceDictionary[ControlAuxiliaryEmphasisColorKey] = value;
+        }
+    }
+
+    public static Color ControlAuxiliaryDisabledColor
+    {
+        get => _controlAuxiliaryDisabledColor;
+        set
+        {
+            _controlAuxiliaryDisabledColor = value;
+            _resourceDictionary[ControlAuxiliaryDisabledColorKey] = value;
+        }
+    }
+
+    public static Brush ControlAuxiliaryNormalBrush
+    {
+        get => _controlAuxiliaryNormalBrush;
+        set
+        {
+            _controlAuxiliaryNormalBrush = value;
+            _resourceDictionary[ControlAuxiliaryNormalBrushKey] = value;
+        }
+    }
+
+    public static Brush ControlAuxiliaryFocusedBrush
+    {
+        get => _controlAuxiliaryFocusedBrush;
+        set
+        {
+            _controlAuxiliaryFocusedBrush = value;
+            _resourceDictionary[ControlAuxiliaryFocusedBrushKey] = value;
+        }
+    }
+
+    public static Brush ControlAuxiliaryPressedBrush
+    {
+        get => _controlAuxiliaryPressedBrush;
+        set
+        {
+            _controlAuxiliaryPressedBrush = value;
+            _resourceDictionary[ControlAuxiliaryPressedBrushKey] = value;
+        }
+    }
+
+    public static Brush ControlAuxiliaryEmphasisBrush
+    {
+        get => _controlAuxiliaryEmphasisBrush;
+        set
+        {
+            _controlAuxiliaryEmphasisBrush = value;
+            _resourceDictionary[ControlAuxiliaryEmphasisBrushKey] = value;
+        }
+    }
+
+    public static Brush ControlAuxiliaryDisabledBrush
+    {
+        get => _controlAuxiliaryDisabledBrush;
+        set
+        {
+            _controlAuxiliaryDisabledBrush = value;
+            _resourceDictionary[ControlAuxiliaryDisabledBrushKey] = value;
+        }
+    }
+
+    // Border
+
+    private static Color _controlBorderNormalColor = SystemColors.ControlColor;
+    private static Color _controlBorderFocusedColor = SystemColors.ControlColor;
+    private static Color _controlBorderPressedColor = SystemColors.ControlColor;
+    private static Color _controlBorderEmphasisColor = SystemColors.ControlColor;
+    private static Color _controlBorderDisabledColor = SystemColors.ControlColor;
+
+    private static Brush _controlBorderNormalBrush = SystemColors.ControlBrush;
+    private static Brush _controlBorderFocusedBrush = SystemColors.ControlBrush;
+    private static Brush _controlBorderPressedBrush = SystemColors.ControlBrush;
+    private static Brush _controlBorderEmphasisBrush = SystemColors.ControlBrush;
+    private static Brush _controlBorderDisabledBrush = SystemColors.ControlBrush;
 
     public static Color ControlBorderNormalColor
     {
@@ -372,6 +352,18 @@ public static partial class ThemeComponents
 
     // ControlForeground
 
+    private static Color _controlForegroundNormalColor = SystemColors.ControlColor;
+    private static Color _controlForegroundFocusedColor = SystemColors.ControlColor;
+    private static Color _controlForegroundPressedColor = SystemColors.ControlColor;
+    private static Color _controlForegroundEmphasisColor = SystemColors.ControlColor;
+    private static Color _controlForegroundDisabledColor = SystemColors.ControlColor;
+
+    private static Brush _controlForegroundNormalBrush = SystemColors.ControlBrush;
+    private static Brush _controlForegroundFocusedBrush = SystemColors.ControlBrush;
+    private static Brush _controlForegroundPressedBrush = SystemColors.ControlBrush;
+    private static Brush _controlForegroundEmphasisBrush = SystemColors.ControlBrush;
+    private static Brush _controlForegroundDisabledBrush = SystemColors.ControlBrush;
+
     public static Color ControlForegroundNormalColor
     {
         get => _controlForegroundNormalColor;
@@ -473,6 +465,18 @@ public static partial class ThemeComponents
     }
 
     // ControlText
+
+    private static Color _controlTextNormalColor = SystemColors.ControlColor;
+    private static Color _controlTextFocusedColor = SystemColors.ControlColor;
+    private static Color _controlTextPressedColor = SystemColors.ControlColor;
+    private static Color _controlTextEmphasisColor = SystemColors.ControlColor;
+    private static Color _controlTextDisabledColor = SystemColors.ControlColor;
+
+    private static Brush _controlTextNormalBrush = SystemColors.ControlBrush;
+    private static Brush _controlTextFocusedBrush = SystemColors.ControlBrush;
+    private static Brush _controlTextPressedBrush = SystemColors.ControlBrush;
+    private static Brush _controlTextEmphasisBrush = SystemColors.ControlBrush;
+    private static Brush _controlTextDisabledBrush = SystemColors.ControlBrush;
 
     public static Color ControlTextNormalColor
     {

@@ -2,9 +2,9 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Windows.Media;
 
-namespace CSX.Toolkits.WpfExtensions.ThemeEngine.DefaultTheme;
+namespace CSX.Toolkits.WpfExtensions.ThemeEngine.DefaultThemes;
 
-public partial class DefaultThemeProvider : IThemeProvider
+public partial class DefaultDarkThemeProvider : IThemeProvider
 {
     public Action<IThemeProvider, ThemeSlots>? ColorUpdatedCallback { get; set; } = null;
     public Action<IThemeProvider, ThemeSlots>? BrushUpdatedCallback { get; set; } = null;

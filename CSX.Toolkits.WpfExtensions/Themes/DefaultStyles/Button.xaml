@@ -36,21 +36,21 @@
         <Setter Property="VerticalContentAlignment" Value="Center" />
 
         <!--Default-Colors (exception: inherit foreground)-->
-        <Setter Property="Background" Value="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundNormalBrushKey}}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static theme:ThemeComponents.ControlBorderNormalBrushKey}}" />
+        <Setter Property="Background" Value="{DynamicResource {x:Static theme:ControlComponents.BackgroundNormalBrushKey}}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static theme:ControlComponents.BorderNormalBrushKey}}" />
 
         <!--Events-->
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundFocusedBrushKey}}" />
+                <Setter Property="Background" Value="{DynamicResource {x:Static theme:ControlComponents.BackgroundFocusedBrushKey}}" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundPressedBrushKey}}" />
+                <Setter Property="Background" Value="{DynamicResource {x:Static theme:ControlComponents.BackgroundPressedBrushKey}}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" Value="{DynamicResource {x:Static theme:ThemeComponents.ControlBackgroundDisabledBrushKey}}" />
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static theme:ThemeComponents.ControlForegroundDisabledBrushKey}}" />
+                <Setter Property="Background" Value="{DynamicResource {x:Static theme:ControlComponents.BackgroundDisabledBrushKey}}" />
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static theme:ControlComponents.ForegroundDisabledBrushKey}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

@@ -2,7 +2,7 @@
 
 namespace CSX.Toolkits.WpfExtensions.ThemeEngine;
 
-public static partial class FallbackComponents
+public static partial class ThemeFallback
 {
     private static readonly Brush _defaultFallbackBrush = new SolidColorBrush(Color.FromArgb(255, 255, 0, 255));
 

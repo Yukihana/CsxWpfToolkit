@@ -14,6 +14,12 @@ public enum ThemeSlots
     ControlBackgroundEmphasis,
     ControlBackgroundDisabled,
 
+    ControlAuxiliaryNormal,
+    ControlAuxiliaryFocused,
+    ControlAuxiliaryPressed,
+    ControlAuxiliaryEmphasis,
+    ControlAuxiliaryDisabled,
+
     ControlBorderNormal,
     ControlBorderFocused,
     ControlBorderPressed,

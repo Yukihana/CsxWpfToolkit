@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>Latest</LangVersion>
+    <Version>0.$([System.DateTime]::UtcNow.ToString("yyyy.MMdd.Hmm"))</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!--Analyzer specific settings-->
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+  </PropertyGroup>
+
+  <!--Dependencies-->
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.7.0" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.13.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSX.Toolkits.Roslyn" Version="0.2023.1104.2356" PrivateAssets="all" GeneratePathProperty="true"/>
+
+    <!-- Analyzer specific settings when using `dotnet pack` -->
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+    <!-- Package the roslyn toolkit alongside this library -->
+    <None Include="$(PkgCSX_Toolkits_Roslyn)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false"/>
+  </ItemGroup>
+
+  <!--Nuget-Settings-->
+  <Target Name="PushNuget" AfterTargets="Pack">
+    <Exec Command="dotnet nuget push $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg -s LocalNugetFeed" />
+  </Target>
+
+</Project>

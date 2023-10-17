@@ -1,9 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CSX.Toolkits.WpfExtensions.ThemeEngine;
 
-public static partial class ThemeComponents
+public static partial class ThemeController
 {
+    private static IThemeProvider _provider;
+    private static IThemeProvider Provider => _provider;
+
     public static event EventHandler<PropertyUpdatingEventArgs<IThemeProvider>>? ProviderChanging;
 
     public static event EventHandler<PropertyUpdatedEventArgs<IThemeProvider>>? ProviderChanged;

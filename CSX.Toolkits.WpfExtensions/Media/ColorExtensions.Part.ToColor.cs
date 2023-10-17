@@ -1,4 +1,4 @@
-﻿using CSX.Toolkits.CSharp.Mathematics;
+﻿using CSX.Toolkits.DotNet.Mathematics;
 using System.Numerics;
 using SDColor = System.Drawing.Color;
 using WMColor = System.Windows.Media.Color;
