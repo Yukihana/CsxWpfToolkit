@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Media;
-using CSX.Toolkits.WpfGenerators;
 
 namespace CSX.Toolkits.WpfExtensions.ThemeEngine;
 

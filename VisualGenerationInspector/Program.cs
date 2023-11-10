@@ -1,4 +1,6 @@
-﻿using CSX.Toolkits.WpfGenerators.StaticThemeResource;
+﻿using CSX.Toolkits.WpfBakery.GenerationContent.StaticThemeResourceContent;
+
+// Detect lang version
 
 var codegenInput = new STRGeneratorManifest(
     ContainingNamespace: "My.Library.Namespace",
@@ -10,7 +12,7 @@ var codegenInput = new STRGeneratorManifest(
     StoragePath: "StaticComponents.Storage",
     ThemeSlot: "SomeBackgroundColor");
 
-var attribOutput = new STRGeneratorResult(AttributeSources.OutputFilename, AttributeSources.SourceCode);
+var attribOutput = new STRGeneratorResult(StrAttributeContent.OutputFilename, StrAttributeContent.SourceCode);
 var codegenOutput = codegenInput.GenerateSourceFromManifest();
 
 var restoreColor = Console.ForegroundColor;

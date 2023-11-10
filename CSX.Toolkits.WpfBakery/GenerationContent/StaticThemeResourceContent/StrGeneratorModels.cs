@@ -1,4 +1,4 @@
-﻿namespace CSX.Toolkits.WpfGenerators.StaticThemeResource;
+﻿namespace CSX.Toolkits.WpfBakery.GenerationContent.StaticThemeResourceContent;
 
 public record STRGeneratorManifest(
     string ContainingNamespace,

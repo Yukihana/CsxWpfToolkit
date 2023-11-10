@@ -1,6 +1,4 @@
-﻿using CSX.Toolkits.WpfGenerators;
-
-namespace ExtensionsTester;
+﻿namespace ExtensionsTester;
 
 [EnumExtensions]
 public enum Stuff

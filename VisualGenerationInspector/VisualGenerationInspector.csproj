@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,11 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSX.Toolkits.Roslyn" Version="0.2023.1105.458" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CSX.Toolkits.WpfGenerators\CSX.Toolkits.WpfGenerators.csproj" />
+    <ProjectReference Include="..\CSX.Toolkits.WpfBakery\CSX.Toolkits.WpfBakery.csproj" />
   </ItemGroup>
 
 </Project>

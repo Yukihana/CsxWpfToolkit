@@ -1,9 +1,9 @@
 ﻿using CSX.Toolkits.Roslyn.Builders;
 using CSX.Toolkits.Roslyn.Builders.SourceBuilderExtensions;
 
-namespace CSX.Toolkits.WpfGenerators.StaticThemeResource;
+namespace CSX.Toolkits.WpfBakery.GenerationContent.StaticThemeResourceContent;
 
-public static partial class GeneratedSources
+public static partial class StrPropertyContent
 {
     public static STRGeneratorResult GenerateSourceFromManifest(this STRGeneratorManifest manifest)
     {

@@ -14,7 +14,7 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="CSX.Toolkits.DotNet" Version="0.2023.1104.1446" />
-    <PackageReference Include="CSX.Toolkits.WpfGenerators" Version="0.2023.1105.1630" PrivateAssets="all" />
+    <PackageReference Include="CSX.Toolkits.WpfBakery" Version="0.2023.1109.2343" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Direct3D.DXC" Version="1.7.2308.12" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
   </ItemGroup>

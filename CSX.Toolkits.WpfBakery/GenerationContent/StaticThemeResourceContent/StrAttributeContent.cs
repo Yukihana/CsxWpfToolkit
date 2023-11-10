@@ -1,11 +1,11 @@
 ﻿using CSX.Toolkits.Roslyn.Builders;
 using CSX.Toolkits.Roslyn.Builders.SourceBuilderExtensions;
 
-namespace CSX.Toolkits.WpfGenerators.StaticThemeResource;
+namespace CSX.Toolkits.WpfBakery.GenerationContent.StaticThemeResourceContent;
 
-public static partial class AttributeSources
+public static partial class StrAttributeContent
 {
-    public const string ContainingNamespace = "CSX.Toolkits.WpfGenerators";
+    public const string ContainingNamespace = "CSX.Toolkits.WpfBakery.Generators";
     public const string Classname = "StaticThemeResourceAttribute";
 
     public static string FullyQualifiedName { get; } = $"{ContainingNamespace}.{Classname}";
